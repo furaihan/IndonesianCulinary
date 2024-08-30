@@ -1,0 +1,13 @@
+<IndonesianCulinary>
+    <append xpath="/progression/crafting_skills[@complete_sound='ui_mag_read_set']">
+        <crafting_skill name="craftingFoodIndonesian" max_level="6" parent="attCrafting" name_key="craftingFoodIndonesianName" desc_key="craftingFoodIndonesianDesc" long_desc_key="craftingFoodIndonesianLongDesc" icon="ui_game_symbol_fork">
+            <display_entry icon="foodSateJamur" name_key="foodIdT1-1" has_quality="false" unlock_level="6">
+                <unlock_entry item="foodSateJamur" unlock_tier="1" />
+            </display_entry>
+
+            <effect_group>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,100" value="1" tags="foodSateJamur"/>
+            </effect_group>
+        </crafting_skill>
+    </append>
+</IndonesianCulinary>

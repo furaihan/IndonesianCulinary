@@ -1,0 +1,7 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+craftingFoodIndonesianName,progression,Attribute,,,Indonesian Food,,,,,,,,,,,,
+craftingFoodIndonesianDesc,progression,Attribute,,,Unlock with regular food magazine,,,,,,,,,,,,
+craftingFoodIndonesianLongDesc,progression,Attribute,,x,CURRENTLY NOT USED,,,,,,,,,,,,
+foodIdT1-1,progression,Attribute,,,Tier 1: Sate Jamur,,,,,,,,,,,,
+foodSateJamur,items,Food,,,Sate Jamur,,,,,,,,,,,,
+foodSateJamurDesc,items,Food,,,"Sate Jamur is a savory Indonesian dish featuring grilled skewers of marinated mushrooms, bursting with smoky and umami flavors. Perfect for a quick, hearty meal in the wilderness.",,,,,,,,,,,,

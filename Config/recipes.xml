@@ -1,0 +1,9 @@
+<IndonesianCulinary>	
+    <append xpath="/recipes">
+		<recipe name="foodSateJamur" count="1">			
+			<ingredient name="foodCropMushrooms" count="3" />
+			<ingredient name="foodCornMeal" count="1" />
+			<ingredient name="resourceWood" count="5"/>
+		</recipe>   
+	</append>
+</IndonesianCulinary>

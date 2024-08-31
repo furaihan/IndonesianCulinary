@@ -1,38 +1,75 @@
 <IndonesianCulinary>
     <append xpath="/items">
         <item name="foodSateJamur">
-            <property name="Tags" value="food,foodSkill,fitness"/>
-            <property name="HoldType" value="31"/>
-            <property name="DisplayType" value="food"/>
-            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
-            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="Morganic"/>
-            <property name="Stacknumber" value="25"/>
-            <property name="EconomicValue" value="124"/>
-            <property name="UnlockedBy" value="craftingFoodIndonesian"/>
-            <property name="SoundPickup" value="meat_grilled_grab"/>
-            <property name="SoundPlace" value="meat_grilled_place"/>
+            <property name="Tags" value="food,foodSkill,fitness" />
+            <property name="HoldType" value="31" />
+            <property name="DisplayType" value="food" />
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab" />
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab" />
+            <property name="Material" value="Morganic" />
+            <property name="Stacknumber" value="25" />
+            <property name="EconomicValue" value="124" />
+            <property name="UnlockedBy" value="craftingFoodIndonesian" />
+            <property name="SoundPickup" value="meat_grilled_grab" />
+            <property name="SoundPlace" value="meat_grilled_place" />
             <property class="Action0">
-                <property name="Class" value="Eat"/>
-                <property name="Delay" value="1.0"/>
-                <property name="Sound_start" value="player_eating"/>
+                <property name="Class" value="Eat" />
+                <property name="Delay" value="1.0" />
+                <property name="Sound_start" value="player_eating" />
             </property>
-            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking" />
 
             <effect_group tiered="false" name="Food Tier 1">
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="5"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$foodAmountAdd" operation="add" value="25" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar=".foodStaminaBonusAdd" operation="add" value="5" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
+                    buff="buffProcessConsumables" />
             </effect_group>
         </item>
-	</append>
-    <!-- Modify the foodSkillMagazine item to add a progression level to the craftingFoodIndonesian perk -->
+        <item name="foodSateAyam">
+            <property name="Tags" value="food,foodSkill,fitness" />
+            <property name="HoldType" value="31" />
+            <property name="DisplayType" value="food" />
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab" />
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab" />
+            <property name="Material" value="Morganic" />
+            <property name="Stacknumber" value="25" />
+            <property name="EconomicValue" value="124" />
+            <property name="UnlockedBy" value="craftingFoodIndonesian" />
+            <property name="SoundPickup" value="meat_grilled_grab" />
+            <property name="SoundPlace" value="meat_grilled_place" />
+            <property class="Action0">
+                <property name="Class" value="Eat" />
+                <property name="Delay" value="1.0" />
+                <property name="Sound_start" value="player_eating" />
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking" />
+
+            <effect_group tiered="false" name="Food Tier 1">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$foodAmountAdd" operation="add" value="35" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="foodHealthAmount" operation="add" value="10" />
+            </effect_group>
+        </item>
+    </append>
+    <!-- Modify the foodSkillMagazine item to add a progression level to the craftingFoodIndonesian
+    perk -->
     <append xpath="/items/item[@name='foodSkillMagazine']/effect_group">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFoodIndonesian" level="1"/> <!-- level="-1" sets a perk to max level -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFoodIndonesian" level="1">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel"
+    progression_name="craftingFoodIndonesian" level="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel"
+    progression_name="craftingFoodIndonesian" level="1">
 			<requirement name="HasBuff" buff="buffNerdOutfit"/>
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$nerdOutfitSkillPointChance"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE"
+    value="@$nerdOutfitSkillPointChance"/>
 		</triggered_effect>
     </append>
+    <!-- Modify the foodSkillMagazine item to add a progression level to the craftingFoodIndonesian perk -->
+    <!-- <append
+        xpath="/items/item[@name='foodSkillMagazine']/effect_group/triggered_effect[@action='AddProgressionLevel']/@progression_name">
+        ,craftingFoodIndonesian
+    </append> -->
 </IndonesianCulinary>

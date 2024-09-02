@@ -92,44 +92,53 @@
             </effect_group>
         </item>
         <item name="drinkJarWedangUwuh">
-            <property name="Tags" value="drinks,foodSkill,fitness"/>
-            <property name="HoldType" value="3"/>
-            <property name="DisplayType" value="waterWedangUwuh"/>
-            <property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
-            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="Mglass"/>
+            <property name="Tags" value="drinks,foodSkill,fitness" />
+            <property name="HoldType" value="3" />
+            <property name="DisplayType" value="waterWedangUwuh" />
+            <property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab" />
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab" />
+            <property name="Material" value="Mglass" />
             <!-- <property name="Weight" value="10"/> -->
-            <property name="Stacknumber" value="25"/> <!-- STK drink -->
-            <property name="EconomicValue" value="48"/>
-            <property name="UnlockedBy" value="craftingFoodIndonesian"/><!-- perkMasterChef,drinkJarGoldenRodTeaSchematic, -->
-            <property name="SoundPickup" value="jars_grab"/>
-            <property name="SoundPlace" value="jars_place"/>
+            <property name="Stacknumber" value="25" /> <!-- STK drink -->
+            <property name="EconomicValue" value="48" />
+            <property name="UnlockedBy" value="craftingFoodIndonesian" /><!--
+            perkMasterChef,drinkJarGoldenRodTeaSchematic, -->
+            <property name="SoundPickup" value="jars_grab" />
+            <property name="SoundPlace" value="jars_place" />
             <property class="Action0">
-                <property name="Class" value="Eat"/>
-                <property name="Delay" value="1.0"/>
-                <property name="Sound_start" value="player_drinking"/>
+                <property name="Class" value="Eat" />
+                <property name="Delay" value="1.0" />
+                <property name="Sound_start" value="player_drinking" />
                 <!-- <property name="Create_item" value="drinkJarEmpty"/> -->
             </property>
-            <property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
-        
+            <property name="Group" value="Food/Cooking,CFDrink/Cooking" />
+
             <effect_group tiered="false" name="Drink Tier 1">
-                <requirement name="NotHasBuff" buff="buffIsOnFire"/>
-                    <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>        
-                    <display_value name="dCureDysentery" value=".35"/>
-                    <display_value name="dHealthLoss" value=".05"/>
-                    <display_value name="dDuration" value="300"/>
-                    <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDysenteryAddCurePerc" operation="add" value="35"/>
-                    <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryAddCure"/>
-                    <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffWedangUwuhDuration" operation="add" value="303"/>
-                    <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffWedangUwuhDuration" operation="set" value="903">
-                        <requirement name="CVarCompare" cvar="$buffWedangUwuhDuration" operation="GT" value="1083"/>
-                    </triggered_effect>
-                    <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffWedangUwuh"/>
+                <requirement name="NotHasBuff" buff="buffIsOnFire" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$waterAmountAdd" operation="add" value="25" />
+                <display_value name="dCureDysentery" value=".35" />
+                <display_value name="dHealthLoss" value=".05" />
+                <display_value name="dDuration" value="300" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$buffDysenteryAddCurePerc" operation="add" value="35" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
+                    buff="buffDysenteryAddCure" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$buffWedangUwuhDuration" operation="add" value="303" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$buffWedangUwuhDuration" operation="set" value="903">
+                    <requirement name="CVarCompare" cvar="$buffWedangUwuhDuration" operation="GT"
+                        value="1083" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
+                    buff="buffWedangUwuh" />
             </effect_group>
-        
+
             <effect_group tiered="false">
-                <requirement name="HasBuff" buff="buffIsOnFire"/>
-                    <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+                <requirement name="HasBuff" buff="buffIsOnFire" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
+                    buff="buffExtinguishFire" />
             </effect_group>
         </item>
     </append>

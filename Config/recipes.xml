@@ -1,37 +1,47 @@
-<IndonesianCulinary>	
-    <append xpath="/recipes">
-		<recipe name="foodSateJamur" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="perkMasterChef,learnable">			
+<IndonesianCulinary>
+	<append xpath="/recipes">
+		<recipe name="foodSateJamur" count="1" craft_area="campfire" craft_tool="toolCookingGrill"
+			tags="perkMasterChef,learnable">
 			<ingredient name="foodCropMushrooms" count="3" />
 			<ingredient name="foodCornMeal" count="1" />
-			<ingredient name="resourceWood" count="8"/>
+			<ingredient name="resourceWood" count="8" />
 			<effect_group>
-				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="-1,-2,-3" tags="resourceWood"/>
-			</effect_group>
-		</recipe>   
-		<recipe name="foodSateAyam" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="perkMasterChef,learnable">			
-			<ingredient name="foodRawMeat" count="5" />
-			<ingredient name="resourceWood" count="8"/>
-			<effect_group>
-				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="-1,-2,-3" tags="resourceWood"/>
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
+					value="-1,-2,-3" tags="resourceWood" />
 			</effect_group>
 		</recipe>
-		<recipe name="foodKolak" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">			
+		<recipe name="foodSateAyam" count="1" craft_area="campfire" craft_tool="toolCookingGrill"
+			tags="perkMasterChef,learnable">
+			<ingredient name="foodRawMeat" count="5" />
+			<ingredient name="resourceWood" count="8" />
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
+					value="-1,-2,-3" tags="resourceWood" />
+			</effect_group>
+		</recipe>
+		<recipe name="foodKolak" count="1" craft_area="campfire" craft_tool="toolCookingPot"
+			tags="perkMasterChef,learnable">
 			<ingredient name="foodCropYuccaFruit" count="3" />
 			<ingredient name="foodCropPumpkin" count="2" />
 			<ingredient name="drinkJarBoiledWater" count="2" />
 			<effect_group>
-				<passive_effect name="CraftingIngredientCount" level="2, 3" operation="base_add" value="-1, -1" tags="foodCropYuccaFruit"/>
-				<passive_effect name="CraftingIngredientCount" level="3" operation="base_add" value="-1" tags="foodCropPumpkin"/>
+				<passive_effect name="CraftingIngredientCount" level="2, 3" operation="base_add"
+					value="-1, -1" tags="foodCropYuccaFruit" />
+				<passive_effect name="CraftingIngredientCount" level="3" operation="base_add"
+					value="-1" tags="foodCropPumpkin" />
 			</effect_group>
 		</recipe>
-		<recipe name="drinkJarWedangUwuh" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">			
+		<recipe name="drinkJarWedangUwuh" count="1" craft_area="campfire"
+			craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
 			<ingredient name="resourceCropChrysanthemumPlant" count="3" />
 			<ingredient name="resourceCropGoldenrodPlant" count="1" />
 			<ingredient name="resourceYuccaFibers" count="3" />
 			<ingredient name="drinkJarBoiledWater" count="1" />
 			<effect_group>
-				<passive_effect name="CraftingIngredientCount" level="2, 3" operation="base_add" value="-1, -2" tags="resourceCropChrysanthemumPlant"/>
-				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="-1,-1,-1" tags="resourceYuccaFibers"/>
+				<passive_effect name="CraftingIngredientCount" level="2, 3" operation="base_add"
+					value="-1, -2" tags="resourceCropChrysanthemumPlant" />
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
+					value="-1,-1,-1" tags="resourceYuccaFibers" />
 			</effect_group>
 		</recipe>
 	</append>

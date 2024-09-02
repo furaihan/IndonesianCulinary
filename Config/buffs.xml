@@ -1,26 +1,33 @@
 <IndonesianCulinary>
     <append xpath="/buffs">
-        <buff name="buffWedangUwuh" name_key="drinkJarWedangUwuh" description_key="drinkJarWedangUwuhDesc" icon="ui_game_symbol_coffee">
-            <stack_type value="replace"/>
-            <duration value="0"/>
-            <display_value value=".buffWedangUwuhDisplay"/>
-            <display_value_format value="time"/>
-    
+        <buff name="buffWedangUwuh" name_key="drinkJarWedangUwuh"
+            description_key="drinkJarWedangUwuhDesc" icon="ui_game_symbol_coffee">
+            <stack_type value="replace" />
+            <duration value="0" />
+            <display_value value=".buffWedangUwuhDisplay" />
+            <display_value_format value="time" />
+
             <effect_group>
-                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffWedangUwuhDuration" operation="subtract" value="@$MetabolismDuration"/>
-                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffWedangUwuhDisplay" operation="set" value="@$buffWedangUwuhDuration"/>
-                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffWedangUwuhDisplay" operation="divide" value="@$MetabolismDuration"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar="$buffWedangUwuhDuration" operation="subtract" value="@$MetabolismDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffWedangUwuhDisplay" operation="set" value="@$buffWedangUwuhDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffWedangUwuhDisplay" operation="divide" value="@$MetabolismDuration" />
             </effect_group>
-    
+
             <effect_group>
-                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffWedangUwuh">
-                    <requirement name="CVarCompare" cvar="$buffWedangUwuhDuration" operation="LTE" value="0"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffWedangUwuh">
+                    <requirement name="CVarCompare" cvar="$buffWedangUwuhDuration" operation="LTE"
+                        value="0" />
                 </triggered_effect>
-                <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".buffWedangUwuhDisplay,$buffWedangUwuhDuration"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+                    cvar=".buffWedangUwuhDisplay,$buffWedangUwuhDuration" />
             </effect_group>
-    
+
             <effect_group>
-                <passive_effect name="GeneralDamageResist" operation="base_add" value="0.05"/>
+                <passive_effect name="GeneralDamageResist" operation="base_add" value="0.05" />
             </effect_group>
         </buff>
     </append>

@@ -24,5 +24,15 @@
 				<passive_effect name="CraftingIngredientCount" level="3" operation="base_add" value="-1" tags="foodCropPumpkin"/>
 			</effect_group>
 		</recipe>
+		<recipe name="drinkJarWedangUwuh" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">			
+			<ingredient name="resourceCropChrysanthemumPlant" count="3" />
+			<ingredient name="resourceCropGoldenrodPlant" count="1" />
+			<ingredient name="resourceYuccaFibers" count="3" />
+			<ingredient name="drinkJarBoiledWater" count="1" />
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2, 3" operation="base_add" value="-1, -2" tags="resourceCropChrysanthemumPlant"/>
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="-1,-1,-1" tags="resourceYuccaFibers"/>
+			</effect_group>
+		</recipe>
 	</append>
 </IndonesianCulinary>

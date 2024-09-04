@@ -5,7 +5,7 @@
             name_key="craftingFoodIndonesianName" desc_key="craftingFoodIndonesianDesc"
             long_desc_key="craftingFoodIndonesianLongDesc" icon="ui_game_symbol_fork">
             <display_entry icon="drinkJarWedangUwuh, foodSateAyam"
-                name_key="foodIdT1-1, foodIdT1-2, foodIdT1-3" has_quality="false"
+                name_key="foodIdT1-1,foodIdT1-2,foodIdT1-3" has_quality="false"
                 unlock_level="6, 10, 18">
                 <unlock_entry item="drinkJarWedangUwuh,foodSateJamur" unlock_tier="1" />
                 <unlock_entry item="foodSateAyam" unlock_tier="2" />

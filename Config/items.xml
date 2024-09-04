@@ -8,7 +8,7 @@
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab" />
             <property name="Material" value="Morganic" />
             <property name="Stacknumber" value="25" />
-            <property name="EconomicValue" value="124" />
+            <property name="EconomicValue" value="36" />
             <property name="UnlockedBy" value="craftingFoodIndonesian" />
             <property name="SoundPickup" value="meat_grilled_grab" />
             <property name="SoundPlace" value="meat_grilled_place" />
@@ -36,7 +36,7 @@
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab" />
             <property name="Material" value="Morganic" />
             <property name="Stacknumber" value="25" />
-            <property name="EconomicValue" value="124" />
+            <property name="EconomicValue" value="41" />
             <property name="UnlockedBy" value="craftingFoodIndonesian" />
             <property name="SoundPickup" value="meat_grilled_grab" />
             <property name="SoundPlace" value="meat_grilled_place" />
@@ -62,7 +62,7 @@
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab" />
             <property name="Material" value="Mplants" />
             <property name="Stacknumber" value="25" /> <!-- STK resource -->
-            <property name="EconomicValue" value="130" />
+            <property name="EconomicValue" value="98" />
             <property name="EconomicBundleSize" value="1" />
             <property name="CraftingIngredientTime" value="10" />
             <!-- 14 is large round hold -->

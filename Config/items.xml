@@ -133,7 +133,7 @@
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
                     cvar="$buffWedangUwuhDuration" operation="set" value="903">
                     <requirement name="CVarCompare" cvar="$buffWedangUwuhDuration" operation="GT"
-                        value="1083" />
+                        value="903" />
                 </triggered_effect>
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
                     buff="buffWedangUwuh" />

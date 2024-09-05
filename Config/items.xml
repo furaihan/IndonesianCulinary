@@ -52,6 +52,8 @@
                     cvar="$foodAmountAdd" operation="add" value="35" />
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
                     cvar="foodHealthAmount" operation="add" value="10" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
+                    buff="buffProcessConsumables" />
             </effect_group>
         </item>
         <item name="foodKolak">
@@ -89,6 +91,8 @@
                     cvar="$buffDysenteryAddCurePerc" operation="add" value="15" />
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
                     buff="buffDysenteryAddCure" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
+                    buff="buffProcessConsumables" />
             </effect_group>
         </item>
         <item name="drinkJarWedangUwuh">
@@ -133,6 +137,8 @@
                 </triggered_effect>
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
                     buff="buffWedangUwuh" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
+                    buff="buffProcessConsumables" />
             </effect_group>
 
             <effect_group tiered="false">

@@ -3,6 +3,7 @@
         <item name="foodSateJamur" count="1,2" />
         <item name="foodSateAyam" count="1,2" />
         <item name="foodKolak" count="1,2" />
+        <item name="foodTinutuan" count="1,2" />
     </append>
     <append xpath="traders/trader_item_groups/trader_item_group[@name='groupDrinks']">
         <item name="drinkJarWedangUwuh" count="1,2" />

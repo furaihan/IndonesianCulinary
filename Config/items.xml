@@ -147,6 +147,45 @@
                     buff="buffExtinguishFire" />
             </effect_group>
         </item>
+        <item name="foodTinutuan">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="foodWater"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="10"/> <!-- STK food -->
+            <property name="EconomicValue" value="134"/>
+            <property name="UnlockedBy" value="craftingFoodIndonesian"/><!-- perkMasterChef,foodHoboStewSchematic, -->
+            <property name="SoundPickup" value="food_bowl1_grab"/>
+            <property name="SoundPlace" value="food_bowl1_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+                <!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+        
+            <effect_group tiered="false" name="Food Tier 3">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="47"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="17"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="11"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="30"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+                <display_value name="dHarvestCount" value=".4"/>
+                <display_value name="dDuration" value="120"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$buffTinutuanDuration" operation="add" value="123" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$buffTinutuanDuration" operation="set" value="243">
+                    <requirement name="CVarCompare" cvar="$buffTinutuanDuration" operation="GT"
+                        value="903" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
+                    buff="buffTinutuan" />
+            </effect_group>
+        </item>
     </append>
     <!-- Modify the foodSkillMagazine item to add a progression level to the craftingFoodIndonesian
     perk -->

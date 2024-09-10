@@ -30,5 +30,36 @@
                 <passive_effect name="GeneralDamageResist" operation="base_add" value="0.05" />
             </effect_group>
         </buff>
+        <buff name="buffTinutuan" name_key="foodTinutuan"
+            description_key="foodTinutuanDesc" icon="ui_game_symbol_coffee">
+            <stack_type value="replace" />
+            <duration value="0" />
+            <display_value value=".buffTinutuanDisplay" />
+            <display_value_format value="time" />
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar="$buffTinutuanDuration" operation="subtract" value="@$MetabolismDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffTinutuanDisplay" operation="set" value="@$buffTinutuanDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffTinutuanDisplay" operation="divide" value="@$MetabolismDuration" />
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffTinutuan">
+                    <requirement name="CVarCompare" cvar="$buffTinutuanDuration" operation="LTE"
+                        value="0" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+                    cvar=".buffTinutuanDisplay,$buffTinutuanDuration" />
+            </effect_group>
+
+            <effect_group>
+                <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+                    <passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusHarvest"/>
+            </effect_group>
+        </buff>
     </append>
 </IndonesianCulinary>

@@ -13,14 +13,20 @@
         <item name="foodKolak" />
         <item name="foodSateAyam" />
         <item name="foodSateJamur" />
+        <item name="foodTinutuan" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='twitch_drink']">
         <item name="drinkJarWedangUwuh" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupQuestFood']">
         <item name="foodKolak" count="2,5" loot_prob_template="QuestT1Prob" />
+        <item name="foodTinutuan" count="2,5" loot_prob_template="QuestT2Prob" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='twitch_foodT1']">
         <item name="foodKolak" count="2,4" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupFoodRare']">
+        <item name="foodTinutuan" count="2,4" />
+
     </append>
 </IndonesianCulinary>

@@ -150,7 +150,7 @@
         <item name="foodTinutuan">
             <property name="Tags" value="food,foodSkill,fitness"/>
             <property name="HoldType" value="31"/>
-            <property name="DisplayType" value="foodWater"/>
+            <property name="DisplayType" value="foodTinutuan"/>
             <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="Morganic"/>

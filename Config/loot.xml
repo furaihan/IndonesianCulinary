@@ -27,6 +27,8 @@
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupFoodRare']">
         <item name="foodTinutuan" count="2,4" />
-
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupFoodPileCommon']">
+        <item name="foodBakwanJagung" count="2,4" />
     </append>
 </IndonesianCulinary>

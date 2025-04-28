@@ -4,7 +4,7 @@ Welcome to the Indonesian Culinary Mod for 7 Days To Die!
 
 ## Description
 
-The Indonesian Culinary Mod adds a variety of delicious Indonesian dishes to the game. From traditional favorites like Nasi Goreng and Rendang, to mouthwatering street food like Satay and Martabak, this mod will satisfy your cravings for Indonesian cuisine.
+The Indonesian Culinary Mod introduces a variety of delicious Indonesian dishes to the game. Enjoy traditional favorites like Perkedel and Wedang Uwuh, or indulge in mouthwatering street food such as Sate Jamur and Sate Ayam. This mod is sure to satisfy your cravings for authentic Indonesian cuisine.
 
 ## Features
 

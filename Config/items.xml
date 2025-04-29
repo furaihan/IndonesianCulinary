@@ -221,6 +221,8 @@
             </effect_group>
         </item>
     </append>
+
+    
     <append xpath="/items">
         <item name="indonesianFoodSkillMagazine">
             <property name="Extends" value="masterSkillMagazine"/>

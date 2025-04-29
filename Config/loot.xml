@@ -31,15 +31,21 @@
     <append xpath="/lootcontainers/lootgroup[@name='groupFoodPileCommon']">
         <item name="foodBakwanJagung" count="2,4" />
     </append>
+
+    <!-- Skill magazine loot -->
     <append
-        xpath="//lootgroup[item[contains(@name, 'foodSkillMagazine') and (@loot_prob_template='medLow')]]">
-        <item name="indonesianFoodSkillMagazine" count="1" loot_prob_template="medLow"
+        xpath="//lootgroup[item[contains(@name, 'foodSkillMagazine') and (@loot_prob_template='veryLow')]]">
+        <item name="indonesianFoodSkillMagazine" count="1" loot_prob_template="veryLow"
             force_prob="true" />
     </append>
-
     <append
         xpath="//lootgroup[item[contains(@name, 'foodSkillMagazine') and (@loot_prob_template='low')]]">
         <item name="indonesianFoodSkillMagazine" count="1" loot_prob_template="low"
+            force_prob="true" />
+    </append>
+    <append
+        xpath="//lootgroup[item[contains(@name, 'foodSkillMagazine') and (@loot_prob_template='medLow')]]">
+        <item name="indonesianFoodSkillMagazine" count="1" loot_prob_template="medLow"
             force_prob="true" />
     </append>
 
@@ -48,13 +54,11 @@
         <item name="indonesianFoodSkillMagazine" count="1" loot_prob_template="med"
             force_prob="true" />
     </append>
-
     <append
         xpath="//lootgroup[item[contains(@name, 'foodSkillMagazine') and (@loot_prob_template='high')]]">
         <item name="indonesianFoodSkillMagazine" count="1" loot_prob_template="high"
             force_prob="true" />
     </append>
-
     <append
         xpath="//lootgroup[item[contains(@name, 'foodSkillMagazine') and not(@loot_prob_template)]]">
         <item name="indonesianFoodSkillMagazine" count="1,2" />

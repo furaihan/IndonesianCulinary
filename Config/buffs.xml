@@ -89,15 +89,10 @@
                     cvar=".buffKopiJossDisplay,$buffKopiJossDuration" />
             </effect_group>
             <effect_group>
-                <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.18">
-                    <requirement name="!HasBuff" buff="buffHealWaterMax" />
-                </passive_effect>
-                <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.1">
-                    <requirement name="HasBuff" buff="buffHealWaterMax" />
-                </passive_effect>
-                <passive_effect name="HypothermalResist" operation="base_add" value="5" />
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.18"/>
+                <passive_effect name="HypothermalResist" operation="base_add" value="10" />
                 <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
-                    cvar="SnowWeatherHelped" operation="set" value="@.buffCoffeeDisplay" />
+                    cvar="SnowWeatherHelped" operation="set" value="@.buffKopiJossDisplay" />
             </effect_group>
         </buff>
     </append>

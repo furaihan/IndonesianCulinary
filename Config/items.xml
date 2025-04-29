@@ -226,7 +226,7 @@
             <property name="Extends" value="masterSkillMagazine"/>
             <property name="Tags" value="foodCSM,csm"/>
             <property name="CustomIcon" value="bookNusantaraCulinarySecrets"/>
-            <property name="DescriptionKey" value="foodSkillMagazineDesc"/>
+            <property name="DescriptionKey" value="indonesianFoodSkillMagazineDesc"/>
             <property name="Unlocks" value="craftingFood"/>
             
             <effect_group tiered="false">

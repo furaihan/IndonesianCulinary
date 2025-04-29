@@ -31,4 +31,7 @@
     <append xpath="/lootcontainers/lootgroup[@name='groupFoodPileCommon']">
         <item name="foodBakwanJagung" count="2,4" />
     </append>
+    <append xpath="/lootcontainers/lootgroup/item[contains(@name, 'foodSkillMagazine')]">
+        <item name="indonesianFoodSkillMagazine"/>
+    </append>
 </IndonesianCulinary>

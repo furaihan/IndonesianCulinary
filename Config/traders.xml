@@ -9,4 +9,7 @@
     <append xpath="traders/trader_item_groups/trader_item_group[@name='groupDrinks']">
         <item name="drinkJarWedangUwuh" count="1,2" />
     </append>
+    <append xpath="traders/trader_item_groups/trader_item_group[@name='skillMagazines']">
+        <item name="indonesianFoodSkillMagazine" count="1,2" />
+    </append>
 </IndonesianCulinary>

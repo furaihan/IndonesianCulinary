@@ -23,5 +23,13 @@
             <display_entry name="dHarvestCount" title_key="statCropHarvestCount" display_type="Percent"/>
             <display_entry name="dDuration" title_key="statDuration" display_type="Time" />
         </item_display_info>
+        <item_display_info display_type="waterKopiJoss" display_group="groupConsumables">
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>
+			<display_entry name="dHypothermalResist" title_key="statHypothermalResist"/>
+            <display_entry name="dCureDysentery" title_key="statCureDysentery"
+                display_type="Percent" />
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+		</item_display_info>
     </append>
 </IndonesianCulinary>

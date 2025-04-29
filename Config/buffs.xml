@@ -57,8 +57,47 @@
             </effect_group>
 
             <effect_group>
-                <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
-                    <passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusHarvest"/>
+                <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE"
+                    value="40" />
+                <passive_effect name="HarvestCount" operation="base_add" value="1"
+                    tags="farmerBonusHarvest" />
+            </effect_group>
+        </buff>
+        <buff name="buffKopiJoss" name_key="drinkJarKopiJoss"
+            description_key="drinkJarKopiJossDesc" icon="ui_game_symbol_coffee">
+            <stack_type value="replace" />
+            <duration value="0" />
+            <display_value value=".buffKopiJossDisplay" />
+            <display_value_format value="time" />
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar="$buffKopiJossDuration" operation="subtract" value="@$MetabolismDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffKopiJossDisplay" operation="set" value="@$buffKopiJossDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffKopiJossDisplay" operation="divide" value="@$MetabolismDuration" />
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffKopiJoss">
+                    <requirement name="CVarCompare" cvar="$buffKopiJossDuration" operation="LTE"
+                        value="0" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+                    cvar=".buffKopiJossDisplay,$buffKopiJossDuration" />
+            </effect_group>
+            <effect_group>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.18">
+                    <requirement name="!HasBuff" buff="buffHealWaterMax" />
+                </passive_effect>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.1">
+                    <requirement name="HasBuff" buff="buffHealWaterMax" />
+                </passive_effect>
+                <passive_effect name="HypothermalResist" operation="base_add" value="5" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar="SnowWeatherHelped" operation="set" value="@.buffCoffeeDisplay" />
             </effect_group>
         </buff>
     </append>

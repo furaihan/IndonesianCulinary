@@ -22,6 +22,10 @@
                     <requirement name="CVarCompare" cvar="$buffWedangUwuhDuration" operation="LTE"
                         value="0" />
                 </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffWedangUwuh">
+                    <requirement name="HasBuff" buff="god" />
+                </triggered_effect>
                 <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
                     cvar=".buffWedangUwuhDisplay,$buffWedangUwuhDuration" />
             </effect_group>
@@ -51,6 +55,10 @@
                     buff="buffTinutuan">
                     <requirement name="CVarCompare" cvar="$buffTinutuanDuration" operation="LTE"
                         value="0" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffTinutuan">
+                    <requirement name="HasBuff" buff="god" />
                 </triggered_effect>
                 <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
                     cvar=".buffTinutuanDisplay,$buffTinutuanDuration" />
@@ -85,14 +93,16 @@
                     <requirement name="CVarCompare" cvar="$buffKopiJossDuration" operation="LTE"
                         value="0" />
                 </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffKopiJoss">
+                    <requirement name="HasBuff" buff="god" />
+                </triggered_effect>
                 <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
                     cvar=".buffKopiJossDisplay,$buffKopiJossDuration" />
             </effect_group>
             <effect_group>
-                <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.18"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.18" />
                 <passive_effect name="HypothermalResist" operation="base_add" value="10" />
-                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
-                    cvar="SnowWeatherHelped" operation="set" value="@.buffKopiJossDisplay" />
             </effect_group>
         </buff>
     </append>

@@ -12,4 +12,15 @@
     <append xpath="traders/trader_item_groups/trader_item_group[@name='skillMagazines']">
         <item name="indonesianFoodSkillMagazine" count="1,2" />
     </append>
+
+    <insertBefore xpath="//trader_item_group[@name='groupRangedAll']">
+        <trader_item_group name="groupIndonesianFood">
+            <item name="foodSateJamur" count="1,2" />
+            <item name="foodSateAyam" count="1,2" />
+            <item name="foodKolak" count="1,2" />
+            <item name="foodTinutuan" count="1,2" />
+            <item name="foodBakwanJagung" count="1,2" />
+            <item name="drinkJarWedangUwuh" count="1,2" />
+        </trader_item_group>
+    </insertBefore>
 </IndonesianCulinary>

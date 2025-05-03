@@ -78,12 +78,12 @@
 		<!-- Kopi Joss -->
 		<recipe name="drinkJarKopiJoss" count="1" craft_area="campfire" craft_tool="toolCookingPot"
 			tags="perkMasterChef,learnable">
-			<ingredient name="foodCropCoffeeBeans" count="2" />
+			<ingredient name="resourceCropCoffeeBeans" count="2" />
 			<ingredient name="resourceCoal" count="1" />
 			<ingredient name="drinkJarBoiledWater" count="1" />
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
-					value="-1,-1,-1" tags="foodCropCoffeeBeans" />
+					value="-1,-1,-1" tags="resourceCropCoffeeBeans" />
 				<passive_effect name="CraftingIngredientCount" level="2,3" operation="base_add"
 					value="-1,-1" tags="resourceWood" />
 			</effect_group>

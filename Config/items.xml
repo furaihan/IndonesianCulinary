@@ -240,7 +240,7 @@
             <effect_group tiered="false" name="Drink Tier Found">
                 <requirement name="NotHasBuff" buff="buffIsOnFire" />
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
-                    cvar="$waterAmountAdd" operation="add" value="24" />
+                    cvar="$waterAmountAdd" operation="add" value="34" />
                 <display_value name="dStaminaRegen" value=".18" />
                 <display_value name="dHypothermalResist" value="10" />
                 <display_value name="dCureDysentery" value=".12" />

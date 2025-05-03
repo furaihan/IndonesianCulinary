@@ -13,6 +13,7 @@
         </trader_item_group>
         <trader_item_group name="groupIndonesianDrinks">
             <item name="drinkJarWedangUwuh" />
+            <item name="drinkJarKopiJoss" />
         </trader_item_group>
         <trader_item_group name="groupIndonesianFoodAll">
             <item group="groupIndonesianFoods" />

@@ -105,5 +105,40 @@
                 <passive_effect name="HypothermalResist" operation="base_add" value="10" />
             </effect_group>
         </buff>
+        <buff name="buffPerkedel" name_key="foodPerkedel"
+            description_key="foodPerkedelDesc" icon="ui_game_symbol_run">
+            <stack_type value="replace" />
+            <duration value="0" />
+            <display_value value=".buffPerkedelDisplay" />
+            <display_value_format value="time" />
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar="$buffPerkedelDuration" operation="subtract" value="@$MetabolismDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffPerkedelDisplay" operation="set" value="@$buffPerkedelDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffPerkedelDisplay" operation="divide" value="@$MetabolismDuration" />
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffPerkedel">
+                    <requirement name="CVarCompare" cvar="$buffPerkedelDuration" operation="LTE"
+                        value="0" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffPerkedel">
+                    <requirement name="HasBuff" buff="god" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+                    cvar=".buffPerkedelDisplay,$buffPerkedelDuration" />
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".5"/>
+            </effect_group>
+
+        </buff>
     </append>
 </IndonesianCulinary>

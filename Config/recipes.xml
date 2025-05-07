@@ -84,9 +84,21 @@
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
 					value="-1,-1,-1" tags="resourceCropCoffeeBeans" />
-				<passive_effect name="CraftingIngredientCount" level="2,3" operation="base_add"
-					value="-1,-1" tags="resourceWood" />
 			</effect_group>
+		</recipe>
+		<recipe name="foodPerkedel" count="1" craft_area="campfire" craft_tool="toolCookingPot"
+			tags="perkMasterChef,learnable">
+			<ingredient name="foodCropPotato" count="2" />
+			<ingredient name="foodCornMeal" count="2" />
+			<ingredient name="drinkJarBoiledWater" count="1" />
+			<ingredient name="resourceAnimalFat" count="1" />
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,3" operation="base_add"
+					value="-1,-1" tags="foodCropPotato" />
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
+					value="-1,-1,-1" tags="foodCornMeal" />
+			</effect_group>
+
 		</recipe>
 	</append>
 </IndonesianCulinary>

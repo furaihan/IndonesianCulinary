@@ -264,6 +264,49 @@
                     buff="buffExtinguishFire" />
             </effect_group>
         </item>
+        <item name="foodPerkedel">
+            <property name="Tags" value="food,foodSkill,fitness" />
+            <property name="HoldType" value="31" />
+            <!-- <property name="DisplayType" value="food"/> -->
+            <property name="DisplayType" value="foodPerkedel" />
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab" />
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab" />
+            <property name="Material" value="Morganic" />
+            <property name="Stacknumber" value="10" /> <!-- STK food -->
+            <property name="EconomicValue" value="36" />
+            <property name="UnlockedBy" value="craftingFoodIndonesian" /><!--
+            perkMasterChef,foodCornOnTheCobSchematic, -->
+            <property name="SoundPickup" value="corn_grilled_grab" />
+            <property name="SoundPlace" value="corn_grilled_place" />
+            <property class="Action0">
+                <property name="Class" value="Eat" />
+                <property name="Delay" value="1.0" />
+                <property name="Sound_start" value="player_eating" />
+                <!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking" />
+            <display_value name="dRunSpeed" value=".05" />
+            <display_value name="dDuration" value="180" />
+
+            <effect_group tiered="false" name="Food Tier 1">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$foodAmountAdd" operation="add" value="41" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="foodHealthAmount" operation="add" value="13" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water"
+                    operation="add" value="-5" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".buffPerkedelDuration"
+                    operation="add" value="183" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar=".buffPerkedelDuration" operation="set" value="543">
+                    <requirement name="CVarCompare" cvar=".buffPerkedelDuration" operation="GT"
+                        value="543" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
+                    buff="buffProcessConsumables,buffPerkedel" />
+                <display_value name="$waterAmountAdd" value="-5" />
+            </effect_group>
+        </item>
     </append>
 
 

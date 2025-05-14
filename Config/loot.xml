@@ -1,4 +1,25 @@
 <IndonesianCulinary>
+    <append xpath="/lootcontainers">
+        <lootgroup name="groupIndonesianFoodT1">
+            <item name ="foodSateJamur"/>
+            <item name ="drinkJarWedangUwuh"/>
+            <item name ="foodSateAyam" loot_prob_template="low"/>
+            <item name ="foodBakwanJagung"/>
+            <item name ="foodKolak" loot_prob_template="low"/>
+            <item name ="drinkJarKopiJoss" loot_prob_template="medLow"/>
+        </lootgroup>
+        <lootgroup name="groupIndonesianFoodT2">
+            <item name ="foodTinutuan"/>
+        </lootgroup>
+        <lootgroup name="groupIndonesianCannedFood">
+            <!-- TBA -->
+        </lootgroup>
+        <lootgroup name="groupIndonesianFood">
+            <item group="groupIndonesianCannedFood" count="1,3" />
+            <item group="groupIndonesianFoodT1" count="1,2" loot_prob_template="medLow" />
+            <item group="groupIndonesianFoodT2" count="1" loot_prob_template="veryLow" />
+        </lootgroup>
+    </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupGrills']">
         <item name="foodSateJamur" count="1,2" loot_prob_template="veryLow" />
         <item name="foodSateAyam" count="1,2" loot_prob_template="veryLow" />

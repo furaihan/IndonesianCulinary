@@ -101,4 +101,18 @@
 
 		</recipe>
 	</append>
+
+	<conditional>
+		<if cond="mod_loaded('EFT_Overhaul')">
+			<removeattribute
+				xpath="//recipe[@name='foodSateJamur' 
+				or @name='foodSateAyam' 
+				or @name='foodKolak' 
+				or @name='drinkJarWedangUwuh' 
+				or @name='foodTinutuan' 
+				or @name='foodBakwanJagung' 
+				or @name='drinkJarKopiJoss' 
+				or @name='foodPerkedel']/@tags" />
+		</if>
+	</conditional>
 </IndonesianCulinary>

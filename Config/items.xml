@@ -296,7 +296,8 @@
                     cvar="foodHealthAmount" operation="add" value="13" />
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water"
                     operation="add" value="-5" />
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".buffPerkedelDuration"
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar=".buffPerkedelDuration"
                     operation="add" value="183" />
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
                     cvar=".buffPerkedelDuration" operation="set" value="543">
@@ -306,6 +307,21 @@
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
                     buff="buffProcessConsumables,buffPerkedel" />
                 <display_value name="$waterAmountAdd" value="-5" />
+            </effect_group>
+        </item>
+        <item name="foodSambalBawang">
+            <property name="Extends" value="foodCanBeef" />
+            <effect_group tiered="false" name="Food Tier 0">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$foodAmountAdd" operation="add" value="15" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="foodHealthAmount" operation="add" value="7" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="foodHealthFarmer" operation="set" value="7">
+                    <requirement name="HasBuff" buff="buffFarmerSetBonus" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
+                    buff="buffProcessConsumables" />
             </effect_group>
         </item>
     </append>
@@ -336,4 +352,11 @@
             </effect_group>
         </item>
     </append>
+
+    <!-- EFT Overhaul Support -->
+     <conditional>
+        <if cond="mod_loaded('EFT_Overhaul')">
+            <remove xpath="/items/item/property[(@name='UnlockedBy') and (@value='craftingFoodIndonesian')]" />
+        </if>
+     </conditional>
 </IndonesianCulinary>

@@ -109,7 +109,7 @@
                 <item name="drinkJarKopiJoss" count="1,2" />
             </append>
             <append xpath="/lootcontainers/lootgroup[@name='groupEftKitchenDrink']">
-                <item name="drinkJarWedangUwuh" count="1,2" />
+                <item name="drinkJarWedangUwuh" count="1,2" loot_prob_template="low" />
             </append>
         </if>
     </conditional>

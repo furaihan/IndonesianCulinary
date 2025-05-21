@@ -1,15 +1,16 @@
 <IndonesianCulinary>
-    <append xpath="traders/trader_item_groups/trader_item_group[@name='skillMagazines']">
+    <append xpath="/traders/trader_item_groups/trader_item_group[@name='skillMagazines']">
         <item name="indonesianFoodSkillMagazine" count="1,2" />
     </append>
 
     <insertBefore xpath="//trader_item_group[@name='groupRangedAll']">
         <trader_item_group name="groupIndonesianFoods">
             <item name="foodSateJamur" />
-            <item name="foodSateAyam"/>
+            <item name="foodSateAyam" />
             <item name="foodKolak" />
-            <item name="foodTinutuan"/>
-            <item name="foodBakwanJagung"/>
+            <item name="foodTinutuan" />
+            <item name="foodBakwanJagung" />
+            <item name="foodPerkedel" />
         </trader_item_group>
         <trader_item_group name="groupIndonesianDrinks">
             <item name="drinkJarWedangUwuh" />
@@ -22,30 +23,48 @@
     </insertBefore>
     <!-- Trader Rekt -->
     <insertAfter xpath="//trader_info[@id='8']/trader_items/item[@group='groupFoodAll']">
-        <item group="groupIndonesianFoodAll" count="1,3" unique_only="true"/>
+        <item group="groupIndonesianFoodAll" count="1,3" unique_only="true" />
     </insertAfter>
     <!-- Trader Jen -->
     <insertAfter xpath="//trader_info[@id='2']/trader_items/item[@group='groupFoodAll']">
-        <item group="groupIndonesianFoodAll" count="1,3" unique_only="true"/>
+        <item group="groupIndonesianFoodAll" count="1,3" unique_only="true" />
     </insertAfter>
     <!-- Trader Bob -->
     <insertAfter xpath="//trader_info[@id='6']/trader_items/item[@group='groupFoodAll']">
-        <item group="groupIndonesianFoodAll" count="1,3" unique_only="true"/>
+        <item group="groupIndonesianFoodAll" count="1,3" unique_only="true" />
     </insertAfter>
     <!-- Trader Hugh -->
     <insertAfter xpath="//trader_info[@id='7']/trader_items/item[@group='groupFoodAll']">
-        <item group="groupIndonesianFoodAll" count="1,3" unique_only="true"/>
+        <item group="groupIndonesianFoodAll" count="1,3" unique_only="true" />
     </insertAfter>
     <!-- Trader Joel -->
     <insertAfter xpath="//trader_info[@id='1']/trader_items/item[@group='groupFoodAll']">
-        <item group="groupIndonesianFoodAll" count="1,3" unique_only="true"/>
+        <item group="groupIndonesianFoodAll" count="1,3" unique_only="true" />
     </insertAfter>
     <!-- Drink Vending Machine -->
     <append xpath="//trader_info[@id='4']/trader_items">
-        <item group="groupIndonesianDrinks" count="1" unique_only="true" prob="0.7"/>
+        <item group="groupIndonesianDrinks" count="1" unique_only="true" prob="0.7" />
     </append>
     <!-- Food Vending Machine -->
     <append xpath="//trader_info[@id='10']/trader_items">
-        <item group="groupIndonesianFoods" count="2" unique_only="true"/>
+        <item group="groupIndonesianFoods" count="2" unique_only="true" />
     </append>
+
+    <!-- EFT Overhaul support -->
+    <conditional>
+        <if cond="mod_loaded('EFT_Overhaul')">
+            <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupEftFreshFood']">
+                <item name="foodSateJamur" />
+                <item name="foodSateAyam" />
+                <item name="foodKolak" />
+                <item name="foodTinutuan" />
+                <item name="foodBakwanJagung" />
+                <item name="foodPerkedel" />
+            </append>
+            <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupEftDrink']">
+                <item name="drinkJarWedangUwuh" />
+                <item name="drinkJarKopiJoss" />
+            </append>
+        </if>
+    </conditional>
 </IndonesianCulinary>

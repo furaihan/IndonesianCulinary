@@ -140,5 +140,41 @@
             </effect_group>
 
         </buff>
+        <buff name="buffSambal" name_key="foodSambalBawang"
+            description_key="foodSambalBawangDesc" icon="ui_game_symbol_run">
+            <stack_type value="replace" />
+            <duration value="0" />
+            <display_value value=".buffSambalDisplay" />
+            <display_value_format value="time" />
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar="$buffSambalDuration" operation="subtract" value="@$MetabolismDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffSambalDisplay" operation="set" value="@$buffSambalDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffSambalDisplay" operation="divide" value="@$MetabolismDuration" />
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffSambal">
+                    <requirement name="CVarCompare" cvar="$buffSambalDuration" operation="LTE"
+                        value="0" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffSambal">
+                    <requirement name="HasBuff" buff="god" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+                    cvar=".buffSambalDisplay,$buffSambalDuration" />
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".15"/>
+                <passive_effect name="WaterChangeOT" operation="base_subtract" value=".25"/>
+            </effect_group>
+
+        </buff>
     </append>
 </IndonesianCulinary>

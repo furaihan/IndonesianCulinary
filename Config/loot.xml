@@ -9,6 +9,7 @@
             <item name="drinkJarKopiJoss" loot_prob_template="medLow" />
             <item name="foodPerkedel" loot_prob_template="medLow" />
             <item name="foodSambalBawang" />
+            <item name="foodSambalMatah" />
         </lootgroup>
         <lootgroup name="groupIndonesianFoodT2">
             <item name="foodTinutuan" />
@@ -24,6 +25,7 @@
             <item name="foodBakwanJagung" />
             <item name="foodPerkedel" />
             <item name="foodSambalBawang" />
+            <item name="foodSambalMatah" />
         </lootgroup>
         <lootgroup name="groupIndonesianDrink">
             <item name="drinkJarWedangUwuh" />
@@ -46,6 +48,7 @@
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='cannedFood']">
         <item name="foodSambalBawang" count="2,4" />
+        <item name="foodSambalMatah" count="1,3" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='airdropfood']">
         <item name="foodKolak" />

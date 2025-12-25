@@ -12,6 +12,7 @@
             <item name="foodBakwanJagung" />
             <item name="foodPerkedel" />
             <item name="foodSambalBawang" />
+            <item name="foodSambalMatah" />
         </trader_item_group>
         <trader_item_group name="groupIndonesianDrinks">
             <item name="drinkJarWedangUwuh" />
@@ -62,6 +63,7 @@
                 <item name="foodBakwanJagung" />
                 <item name="foodPerkedel" />
                 <item name="foodSambalBawang" />
+                <item name="foodSambalMatah" />
             </append>
             <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupEftDrink']">
                 <item name="drinkJarWedangUwuh" />

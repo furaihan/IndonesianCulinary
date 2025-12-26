@@ -140,8 +140,8 @@
             </effect_group>
 
         </buff>
-        <buff name="buffSambal" name_key="foodSambalBawang"
-            description_key="foodSambalBawangDesc" icon="ui_game_symbol_run">
+        <buff name="buffSambal" name_key="buffSambal"
+            description_key="buffSambalDesc" icon="ui_game_symbol_run">
             <stack_type value="replace" />
             <duration value="0" />
             <display_value value=".buffSambalDisplay" />

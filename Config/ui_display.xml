@@ -45,5 +45,12 @@
             <display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
             <display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
         </item_display_info>
+        <item_display_info display_type="foodRawon" display_group="groupConsumables">
+            <display_entry name="$foodAmountAdd" title_key="statFoodAmount" />
+            <display_entry name="foodHealthAmount" title_key="statHealthAmount" />
+            <display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+            <display_entry name="dHealthRegen" title_key="statHealthRegen" display_type="Percent"/>
+            <display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+        </item_display_info>
     </append>
 </IndonesianCulinary>

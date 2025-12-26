@@ -174,7 +174,42 @@
                 <passive_effect name="RunSpeed" operation="perc_add" value=".15"/>
                 <passive_effect name="WaterChangeOT" operation="base_subtract" value=".25"/>
             </effect_group>
+        </buff>
+        <buff name="buffRawon" name_key="buffRawon"
+            description_key="buffRawonDesc" icon="ui_game_symbol_coffee">
+            <stack_type value="replace" />
+            <duration value="0" />
+            <display_value value=".buffRawonDisplay" />
+            <display_value_format value="time" />
 
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar="$buffRawonDuration" operation="subtract" value="@$MetabolismDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffRawonDisplay" operation="set" value="@$buffRawonDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffRawonDisplay" operation="divide" value="@$MetabolismDuration" />
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffRawon">
+                    <requirement name="CVarCompare" cvar="$buffRawonDuration" operation="LTE"
+                        value="0" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffRawon">
+                    <requirement name="HasBuff" buff="god" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+                    cvar=".buffRawonDisplay,$buffRawonDuration" />
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="MeleeDamage" operation="perc_add" value="0.25"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.2"/>
+                <passive_effect name="HealthChangeOT" operation="base_add" value="-0.01"/>
+            </effect_group>
         </buff>
     </append>
 </IndonesianCulinary>

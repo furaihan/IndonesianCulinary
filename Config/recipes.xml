@@ -100,6 +100,20 @@
 			</effect_group>
 
 		</recipe>
+		<recipe name="foodRawon" count="1" craft_area="campfire" craft_tool="toolCookingPot"
+			tags="perkMasterChef,learnable">
+			<ingredient name="foodBoiledMeat" count="4" />
+			<ingredient name="resourceCropGoldenrodPlant" count="4" />
+			<ingredient name="foodEggBoiled" count="1" />
+			<ingredient name="foodCropPotato" count="1" />
+			<ingredient name="drinkJarBoiledWater" count="2" />
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,3" operation="base_add"
+					value="-1,-1" tags="resourceCropGoldenrodPlant" />
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
+					value="-1,-1,-2" tags="foodRawMeat" />
+			</effect_group>
+		</recipe>
 	</append>
 
 	<conditional>

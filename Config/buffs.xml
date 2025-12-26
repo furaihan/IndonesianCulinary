@@ -206,7 +206,7 @@
             </effect_group>
 
             <effect_group>
-                <passive_effect name="MeleeDamage" operation="perc_add" value="0.25"/>
+                <passive_effect name="EntityDamage" operation="perc_add" value=".25" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler"/>
                 <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.2"/>
                 <passive_effect name="HealthChangeOT" operation="base_add" value="-0.01"/>
             </effect_group>

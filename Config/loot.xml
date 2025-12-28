@@ -48,11 +48,13 @@
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupDrinksUncommon']">
         <item name="drinkJarWedangUwuh" />
+        <item name="drinkJarKopiJoss" loot_prob_template="low" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='airdropdrink']">
         <item name="drinkJarWedangUwuh" />
+        <item name="drinkJarKopiJoss" loot_prob_template="low" />
     </append>
-    <append xpath="/lootcontainers/lootgroup[@name='cannedFood']">
+    <append xpath="/lootcontainers/lootgroup[@name='cannedfood']">
         <item name="foodSambalBawang" count="2,4" />
         <item name="foodSambalMatah" count="1,3" />
     </append>
@@ -67,6 +69,7 @@
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='twitch_drink']">
         <item name="drinkJarWedangUwuh" />
+        <item name="drinkJarKopiJoss" loot_prob_template="low" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupQuestFood']">
         <item name="foodKolak" count="2,5" loot_prob_template="QuestT1Prob" />
@@ -86,6 +89,67 @@
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupFoodPileCommon']">
         <item name="foodBakwanJagung" count="2,4" />
+    </append>
+
+    <!-- Vanilla kitchen & food-POI containers (keeps spawns thematically placed) -->
+    <append xpath="/lootcontainers/lootgroup[@name='groupCupboard01']">
+        <item name="foodSambalBawang" loot_prob_template="veryLow" />
+        <item name="foodSambalMatah" loot_prob_template="veryLow" />
+        <item name="foodBakwanJagung" loot_prob_template="veryLow" />
+        <item name="foodPerkedel" loot_prob_template="veryLow" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupMicrowave01']">
+        <item name="foodKolak" loot_prob_template="veryLow" />
+        <item name="foodSateAyam" loot_prob_template="veryLow" />
+        <item name="foodSateJamur" loot_prob_template="veryLow" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupRefrigerator01']">
+        <item name="foodKolak" loot_prob_template="low" />
+        <item name="foodTinutuan" loot_prob_template="veryLow" />
+        <item name="foodSotoBetawi" loot_prob_template="veryLow" />
+        <item name="foodRawon" loot_prob_template="veryLow" />
+        <item name="foodBrongkos" loot_prob_template="veryLow" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupRefrigerator02']">
+        <item name="drinkJarWedangUwuh" loot_prob_template="low" />
+        <item name="drinkJarKopiJoss" loot_prob_template="veryLow" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupCoffeeMaker01']">
+        <item name="drinkJarKopiJoss" count="1" loot_prob_template="veryLow" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupShoppingCart01']">
+        <item name="foodBakwanJagung" loot_prob_template="veryLow" />
+        <item name="foodPerkedel" loot_prob_template="veryLow" />
+        <item name="foodSambalBawang" loot_prob_template="veryLow" />
+        <item name="foodSambalMatah" loot_prob_template="veryLow" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupShoppingCart02']">
+        <item name="drinkJarWedangUwuh" loot_prob_template="veryLow" />
+        <item name="drinkJarKopiJoss" loot_prob_template="veryLow" />
+    </append>
+
+    <!-- Shamway / grocery-style containers -->
+    <append xpath="/lootcontainers/lootgroup[@name='groupShamwayShelves02']">
+        <item name="foodSambalBawang" loot_prob_template="veryLow" />
+        <item name="foodSambalMatah" loot_prob_template="veryLow" />
+        <item name="foodBakwanJagung" loot_prob_template="veryLow" />
+        <item name="foodPerkedel" loot_prob_template="veryLow" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupShamwayFreezer01']">
+        <item name="foodTinutuan" loot_prob_template="veryLow" />
+        <item name="foodSotoBetawi" loot_prob_template="veryLow" />
+        <item name="foodRawon" loot_prob_template="veryLow" />
+        <item name="foodBrongkos" loot_prob_template="veryLow" />
+        <item name="foodKolak" loot_prob_template="veryLow" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupShamwayCooler01']">
+        <item name="drinkJarWedangUwuh" loot_prob_template="veryLow" />
+        <item name="drinkJarKopiJoss" loot_prob_template="veryLow" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupShamwayCrate01']">
+        <item group="groupIndonesianFoodT1" loot_prob_template="low" />
+        <item group="groupIndonesianFoodT2" loot_prob_template="veryLow" />
+        <item group="groupIndonesianDrink" loot_prob_template="veryLow" />
     </append>
 
     <!-- Skill magazine loot -->

@@ -134,7 +134,7 @@
 			tags="perkMasterChef,learnable">
 			<ingredient name="foodBoiledMeat" count="4" />
 			<ingredient name="foodCanPeas" count="1" />
-			<ingredient name="foodCanFat" count="1"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
 			<ingredient name="resourceCropChrysanthemumPlant" count="6" />
 			<ingredient name="drinkJarBoiledWater" count="2" />
 			<effect_group>

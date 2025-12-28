@@ -81,14 +81,47 @@
     <append xpath="/lootcontainers/lootgroup[@name='twitch_foodT1']">
         <item name="foodKolak" count="2,4" />
     </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupQuestT0Food']">
+        <item name="foodBakwanJagung" count="3,6" />
+        <item name="foodPerkedel" count="3,6" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupQuestT2Food']">
+        <item name="foodTinutuan" count="2,4" />
+        <item name="foodSotoBetawi" count="2,4" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupQuestT3Food']">
+        <item name="foodRawon" count="2,3" />
+        <item name="foodBrongkos" count="2,3" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupQuestT4Food']">
+        <item name="foodRawon" count="3,5" />
+        <item name="foodBrongkos" count="3,5" />
+    </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupFoodRare']">
         <item name="foodTinutuan" count="2,4" />
         <item name="foodSotoBetawi" count="2,4" />
         <item name="foodRawon" count="2,4" />
         <item name="foodBrongkos" count="2,4" />
     </append>
+    <append xpath="/lootcontainers/lootgroup[@name='rareFoodDrink']">
+        <item name="foodRawon" loot_prob_template="low" />
+        <item name="foodBrongkos" loot_prob_template="low" />
+        <item name="drinkJarKopiJoss" loot_prob_template="low" />
+    </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupFoodPileCommon']">
         <item name="foodBakwanJagung" count="2,4" />
+    </append>
+
+    <!-- Master Chef dumpster finds -->
+    <append xpath="/lootcontainers/lootgroup[@name='groupDumpsterFood']">
+        <item name="foodBakwanJagung" loot_prob_template="veryLow" />
+        <item name="foodPerkedel" loot_prob_template="veryLow" />
+        <item name="foodSateJamur" loot_prob_template="veryLow" />
+    </append>
+
+    <!-- Bike/Vehicle themed (run speed foods) -->
+    <append xpath="/lootcontainers/lootgroup[@name='bicycleParts']">
+        <item name="foodPerkedel" loot_prob_template="veryLow" />
     </append>
 
     <!-- Vanilla kitchen & food-POI containers (keeps spawns thematically placed) -->
@@ -116,6 +149,9 @@
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupCoffeeMaker01']">
         <item name="drinkJarKopiJoss" count="1" loot_prob_template="veryLow" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupUtilityItems']">
+        <item name="drinkJarKopiJoss" loot_prob_template="veryLow" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupShoppingCart01']">
         <item name="foodBakwanJagung" loot_prob_template="veryLow" />
@@ -150,6 +186,43 @@
         <item group="groupIndonesianFoodT1" loot_prob_template="low" />
         <item group="groupIndonesianFoodT2" loot_prob_template="veryLow" />
         <item group="groupIndonesianDrink" loot_prob_template="veryLow" />
+    </append>
+
+    <!-- Water cooler drinks -->
+    <append xpath="/lootcontainers/lootgroup[@name='groupWaterCooler']">
+        <item name="drinkJarWedangUwuh" loot_prob_template="veryLow" />
+    </append>
+
+    <!-- Seed groups (if you add Indonesian plants/ingredients in future) -->
+    <!-- Uncomment when adding plant-based ingredients:
+    <append xpath="/lootcontainers/lootgroup[@name='seeds']">
+        <item name="seedIndonesianSpice" loot_prob_template="low" />
+    </append>
+    -->
+
+    <!-- Utility & Farming themed (harvest bonus food) -->
+    <append xpath="/lootcontainers/lootgroup[@name='seeds']">
+        <item name="foodTinutuan" loot_prob_template="low" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='seedsNoFlowers']">
+        <item name="foodTinutuan" loot_prob_template="low" />
+    </append>
+
+    <!-- Working Stiffs (energy foods - Perkedel for run speed) -->
+    <append xpath="/lootcontainers/lootgroup[@name='groupWorkingStiffs03']">
+        <item name="foodPerkedel" loot_prob_template="veryLow" />
+        <item name="drinkJarKopiJoss" loot_prob_template="veryLow" />
+    </append>
+
+    <!-- Lucky Looter themed (Soto Betawi has +15 loot stage!) -->
+    <append xpath="/lootcontainers/lootgroup[@name='groupLuckyLooterBooks']">
+        <item name="foodSotoBetawi" loot_prob_template="veryLow" />
+    </append>
+
+    <!-- Survival/Medical themed (dysentery cure drinks) -->
+    <append xpath="/lootcontainers/lootgroup[@name='survivalMedical']">
+        <item name="drinkJarWedangUwuh" loot_prob_template="veryLow" />
+        <item name="foodKolak" loot_prob_template="veryLow" />
     </append>
 
     <!-- Skill magazine loot -->

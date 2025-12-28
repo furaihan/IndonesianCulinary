@@ -208,7 +208,47 @@
             <effect_group>
                 <passive_effect name="EntityDamage" operation="perc_add" value=".25" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler"/>
                 <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.2"/>
-                <passive_effect name="HealthChangeOT" operation="base_add" value="-0.01"/>
+            </effect_group>
+
+            <effect_group>
+                <requirement name="StatCompareCurrent" stat="health" operation="GT" value="5" />
+                <passive_effect name="HealthChangeOT" operation="base_subtract" value=".5"/>
+            </effect_group>
+        </buff>
+        <buff name="buffSotoBetawi" name_key="foodSotoBetawi"
+            description_key="foodSotoBetawiDesc" icon="ui_game_symbol_coffee">
+            <stack_type value="replace" />
+            <duration value="0" />
+            <display_value value=".buffSotoBetawiDisplay" />
+            <display_value_format value="time" />
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar="$buffSotoBetawiDuration" operation="subtract" value="@$MetabolismDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffSotoBetawiDisplay" operation="set" value="@$buffSotoBetawiDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffSotoBetawiDisplay" operation="divide" value="@$MetabolismDuration" />
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffSotoBetawi">
+                    <requirement name="CVarCompare" cvar="$buffSotoBetawiDuration" operation="LTE"
+                        value="0" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffSotoBetawi">
+                    <requirement name="HasBuff" buff="god" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+                    cvar=".buffSotoBetawiDisplay,$buffSotoBetawiDuration" />
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="LootStage" operation="base_add" value="7"/>
+                <passive_effect name="LootStage" operation="perc_add" value=".1"/>
+                <passive_effect name="BuffResistance" operation="base_add" value=".7" tags="buffInjuryStunned01CHTrigger,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun"/>
             </effect_group>
         </buff>
     </append>

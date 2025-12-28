@@ -114,6 +114,22 @@
 					value="-1,-1,-2" tags="foodRawMeat" />
 			</effect_group>
 		</recipe>
+		<recipe name="foodSotoBetawi" count="1" craft_area="campfire" craft_tool="toolCookingPot"
+			tags="perkMasterChef,learnable">
+			<ingredient name="foodBaconAndEggs" count="1" />
+			<ingredient name="foodCropPotato" count="2" />
+			<ingredient name="resourceAnimalFat" count="4" />
+			<ingredient name="drinkJarBoiledWater" count="2" />
+			<ingredient name="resourceCropGoldenrodPlant" count="4"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="3" operation="base_add"
+					value="-1" tags="foodCropPotato" />
+				<passive_effect name="CraftingIngredientCount" level="2,3" operation="base_add"
+					value="-1,-2" tags="resourceAnimalFat" />
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
+					value="-1,-1,-2" tags="resourceCropGoldenrodPlant" />
+			</effect_group>
+		</recipe>
 	</append>
 
 	<conditional>

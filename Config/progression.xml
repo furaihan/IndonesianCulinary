@@ -1,7 +1,7 @@
 <IndonesianCulinary>
     <insertAfter
         xpath="/progression/crafting_skills[@complete_sound='ui_mag_read_set']/crafting_skill[@name='craftingFood']">
-        <crafting_skill name="craftingFoodIndonesian" max_level="35" parent="attCrafting"
+        <crafting_skill name="craftingFoodIndonesian" max_level="40" parent="attCrafting"
             name_key="craftingFoodIndonesianName" desc_key="craftingFoodIndonesianDesc"
             long_desc_key="craftingFoodIndonesianLongDesc" icon="ui_game_symbol_fork">
             <display_entry icon="drinkJarWedangUwuh,foodSateAyam,foodKolak"
@@ -11,10 +11,11 @@
                 <unlock_entry item="foodSateAyam,foodBakwanJagung" unlock_tier="2" />
                 <unlock_entry item="foodKolak, drinkJarKopiJoss" unlock_tier="3" />
             </display_entry>
-            <display_entry icon="foodTinutuan,foodRawon" name_key="foodIdT2-1" has_quality="false"
-                unlock_level="30, 35">
-                <unlock_entry item="foodTinutuan" unlock_tier="1" />
+            <display_entry icon="foodTinutuan,foodRawon,foodSotoBetawi" name_key="foodIdT2-1" has_quality="false"
+                unlock_level="30,35,40">
+                <unlock_entry item="foodTinutuan,foodPerkedel" unlock_tier="1" />
                 <unlock_entry item="foodRawon" unlock_tier="2" />
+                <unlock_entry item="foodSotoBetawi" unlock_tier="3" />  
             </display_entry>
 
             <effect_group>
@@ -25,9 +26,11 @@
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,100"
                     value="1" tags="foodKolak, drinkJarKopiJoss" />
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100"
-                    value="1" tags="foodTinutuan" />
+                    value="1" tags="foodTinutuan,foodPerkedel" />
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100"
                     value="1" tags="foodRawon" />
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,100"
+                    value="1" tags="foodSotoBetawi" />
             </effect_group>
         </crafting_skill>
     </insertAfter>

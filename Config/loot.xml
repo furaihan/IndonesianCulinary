@@ -13,6 +13,7 @@
         </lootgroup>
         <lootgroup name="groupIndonesianFoodT2">
             <item name="foodTinutuan" />
+            <item name="foodSotoBetawi" />
             <item name="foodRawon" loot_prob_template="low" />
         </lootgroup>
         <lootgroup name="groupIndonesianCannedFood">
@@ -23,6 +24,7 @@
             <item name="foodSateAyam" />
             <item name="foodKolak" />
             <item name="foodTinutuan" />
+            <item name="foodSotoBetawi" />
             <item name="foodRawon" />
             <item name="foodBakwanJagung" />
             <item name="foodPerkedel" />
@@ -57,6 +59,7 @@
         <item name="foodSateAyam" />
         <item name="foodSateJamur" />
         <item name="foodTinutuan" />
+        <item name="foodSotoBetawi" />
         <item name="foodRawon" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='twitch_drink']">
@@ -65,6 +68,7 @@
     <append xpath="/lootcontainers/lootgroup[@name='groupQuestFood']">
         <item name="foodKolak" count="2,5" loot_prob_template="QuestT1Prob" />
         <item name="foodTinutuan" count="2,5" loot_prob_template="QuestT2Prob" />
+        <item name="foodSotoBetawi" count="2,5" loot_prob_template="QuestT2Prob" />
         <item name="foodRawon" count="2,5" loot_prob_template="QuestT2Prob" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='twitch_foodT1']">
@@ -72,6 +76,7 @@
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupFoodRare']">
         <item name="foodTinutuan" count="2,4" />
+        <item name="foodSotoBetawi" count="2,4" />
         <item name="foodRawon" count="2,4" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupFoodPileCommon']">
@@ -117,6 +122,7 @@
             </append>
             <append xpath="/lootcontainers/lootgroup[@name='groupEftKitchenFreshFood']">
                  <item group="groupIndonesianFood" />
+                 <item name="foodSotoBetawi" />
             </append>
             <append xpath="/lootcontainers/lootgroup[@name='groupEftKitchenCoffee']">
                 <item name="drinkJarKopiJoss" count="1,2" />

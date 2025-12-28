@@ -15,6 +15,7 @@
             <item name="foodTinutuan" />
             <item name="foodSotoBetawi" />
             <item name="foodRawon" loot_prob_template="low" />
+            <item name="foodBrongkos" loot_prob_template="low" />
         </lootgroup>
         <lootgroup name="groupIndonesianCannedFood">
             <!-- TBA -->
@@ -26,6 +27,7 @@
             <item name="foodTinutuan" />
             <item name="foodSotoBetawi" />
             <item name="foodRawon" />
+            <item name="foodBrongkos" />
             <item name="foodBakwanJagung" />
             <item name="foodPerkedel" />
             <item name="foodSambalBawang" />
@@ -61,6 +63,7 @@
         <item name="foodTinutuan" />
         <item name="foodSotoBetawi" />
         <item name="foodRawon" />
+        <item name="foodBrongkos" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='twitch_drink']">
         <item name="drinkJarWedangUwuh" />
@@ -70,6 +73,7 @@
         <item name="foodTinutuan" count="2,5" loot_prob_template="QuestT2Prob" />
         <item name="foodSotoBetawi" count="2,5" loot_prob_template="QuestT2Prob" />
         <item name="foodRawon" count="2,5" loot_prob_template="QuestT2Prob" />
+        <item name="foodBrongkos" count="2,5" loot_prob_template="QuestT2Prob" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='twitch_foodT1']">
         <item name="foodKolak" count="2,4" />
@@ -78,6 +82,7 @@
         <item name="foodTinutuan" count="2,4" />
         <item name="foodSotoBetawi" count="2,4" />
         <item name="foodRawon" count="2,4" />
+        <item name="foodBrongkos" count="2,4" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupFoodPileCommon']">
         <item name="foodBakwanJagung" count="2,4" />

@@ -55,7 +55,6 @@
         </item_display_info>
          <item_display_info display_type="foodSotoBetawi" display_group="groupConsumables">
             <display_entry name="dLootStageFlat" title_key="statLootStage" display_leading_plus="true"/>
-			<display_entry name="dLootStagePerc" title_key="statLootStage" display_type="Percent" display_leading_plus="true"/>
             <display_entry name="dStunResist" title_key="statStunResist" display_type="Percent" />
 			<display_entry name="$foodAmountAdd" title_key="statFoodAmount" />
             <display_entry name="foodHealthAmount" title_key="statHealthAmount" />

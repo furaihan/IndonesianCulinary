@@ -246,9 +246,52 @@
             </effect_group>
 
             <effect_group>
-                <passive_effect name="LootStage" operation="base_add" value="7"/>
-                <passive_effect name="LootStage" operation="perc_add" value=".1"/>
+                <passive_effect name="LootStage" operation="base_add" value="15"/>
                 <passive_effect name="BuffResistance" operation="base_add" value=".7" tags="buffInjuryStunned01CHTrigger,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun"/>
+            </effect_group>
+        </buff>
+        <buff name="buffBrongkos" name_key="buffBrongkos"
+            description_key="buffBrongkosDesc" icon="ui_game_symbol_coffee">
+            <stack_type value="replace" />
+            <duration value="0" />
+            <display_value value=".buffBrongkosDisplay" />
+            <display_value_format value="time" />
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar="$buffBrongkosDuration" operation="subtract" value="@$MetabolismDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffBrongkosDisplay" operation="set" value="@$buffBrongkosDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffBrongkosDisplay" operation="divide" value="@$MetabolismDuration" />
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffBrongkos">
+                    <requirement name="CVarCompare" cvar="$buffBrongkosDuration" operation="LTE"
+                        value="0" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffBrongkos">
+                    <requirement name="HasBuff" buff="god" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+                    cvar=".buffBrongkosDisplay,$buffBrongkosDuration" />
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.08"/>
+                <passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-.06"/>
+                <passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="-.06"/>
+                <passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+                <passive_effect name="WeaponHandling" operation="perc_add" value="-.05">
+                    <requirement name="HasBuff" buff="buffHoldBreathAiming01"/>
+                </passive_effect>
+                <passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.2"/>
+                <passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.2"/>
+                <passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.2"/>
+                <passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.2"/>
             </effect_group>
         </buff>
     </append>

@@ -111,7 +111,7 @@
 				<passive_effect name="CraftingIngredientCount" level="2,3" operation="base_add"
 					value="-1,-1" tags="resourceCropGoldenrodPlant" />
 				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
-					value="-1,-1,-2" tags="foodRawMeat" />
+					value="-1,-1,-2" tags="foodBoiledMeat" />
 			</effect_group>
 		</recipe>
 		<recipe name="foodSotoBetawi" count="1" craft_area="campfire" craft_tool="toolCookingPot"
@@ -128,6 +128,20 @@
 					value="-1,-2" tags="resourceAnimalFat" />
 				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
 					value="-1,-1,-2" tags="resourceCropGoldenrodPlant" />
+			</effect_group>
+		</recipe>
+		<recipe name="foodBrongkos" count="1" craft_area="campfire" craft_tool="toolCookingPot"
+			tags="perkMasterChef,learnable">
+			<ingredient name="foodBoiledMeat" count="4" />
+			<ingredient name="foodCanPeas" count="1" />
+			<ingredient name="foodCanFat" count="1"/>
+			<ingredient name="resourceCropChrysanthemumPlant" count="6" />
+			<ingredient name="drinkJarBoiledWater" count="2" />
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
+					value="-1,-1,-2" tags="foodBoiledMeat" />
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
+					value="-1,-2,-3" tags="resourceCropChrysanthemumPlant" />
 			</effect_group>
 		</recipe>
 	</append>

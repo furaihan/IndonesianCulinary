@@ -11,6 +11,7 @@
             <item name="foodTinutuan" />
             <item name="foodSotoBetawi" />
             <item name="foodRawon" />
+            <item name="foodBrongkos" />
             <item name="foodBakwanJagung" />
             <item name="foodPerkedel" />
             <item name="foodSambalBawang" />
@@ -63,6 +64,7 @@
                 <item name="foodKolak" />
                 <item name="foodTinutuan" />
                 <item name="foodSotoBetawi" />
+                <item name="foodBrongkos" />
                 <item name="foodBakwanJagung" />
                 <item name="foodPerkedel" />
                 <item name="foodSambalBawang" />

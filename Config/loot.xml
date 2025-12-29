@@ -36,6 +36,7 @@
         <lootgroup name="groupIndonesianDrink">
             <item name="drinkJarWedangUwuh" />
             <item name="drinkJarKopiJoss" />
+            <item name="drinkJarCendolDawet" />
         </lootgroup>
         <lootgroup name="groupIndonesianFoodAll">
             <item group="groupIndonesianFood" />
@@ -49,10 +50,12 @@
     <append xpath="/lootcontainers/lootgroup[@name='groupDrinksUncommon']">
         <item name="drinkJarWedangUwuh" />
         <item name="drinkJarKopiJoss" loot_prob_template="low" />
+        <item name="drinkJarCendolDawet" loot_prob_template="medLow" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='airdropdrink']">
         <item name="drinkJarWedangUwuh" />
         <item name="drinkJarKopiJoss" loot_prob_template="low" />
+        <item name="drinkJarCendolDawet" loot_prob_template="medLow" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='cannedfood']">
         <item name="foodSambalBawang" count="2,4" />
@@ -70,6 +73,7 @@
     <append xpath="/lootcontainers/lootgroup[@name='twitch_drink']">
         <item name="drinkJarWedangUwuh" />
         <item name="drinkJarKopiJoss" loot_prob_template="low" />
+        <item name="drinkJarCendolDawet" loot_prob_template="medLow" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupQuestFood']">
         <item name="foodKolak" count="2,5" loot_prob_template="QuestT1Prob" />
@@ -146,6 +150,7 @@
     <append xpath="/lootcontainers/lootgroup[@name='groupRefrigerator02']">
         <item name="drinkJarWedangUwuh" loot_prob_template="low" />
         <item name="drinkJarKopiJoss" loot_prob_template="veryLow" />
+        <item name="drinkJarCendolDawet" loot_prob_template="low" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupCoffeeMaker01']">
         <item name="drinkJarKopiJoss" count="1" loot_prob_template="veryLow" />
@@ -181,6 +186,7 @@
     <append xpath="/lootcontainers/lootgroup[@name='groupShamwayCooler01']">
         <item name="drinkJarWedangUwuh" loot_prob_template="veryLow" />
         <item name="drinkJarKopiJoss" loot_prob_template="veryLow" />
+        <item name="drinkJarCendolDawet" loot_prob_template="low" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupShamwayCrate01']">
         <item group="groupIndonesianFoodT1" loot_prob_template="low" />
@@ -191,6 +197,7 @@
     <!-- Water cooler drinks -->
     <append xpath="/lootcontainers/lootgroup[@name='groupWaterCooler']">
         <item name="drinkJarWedangUwuh" loot_prob_template="veryLow" />
+        <item name="drinkJarCendolDawet" loot_prob_template="low" />
     </append>
 
     <!-- Seed groups (if you add Indonesian plants/ingredients in future) -->
@@ -271,6 +278,7 @@
             </append>
             <append xpath="/lootcontainers/lootgroup[@name='groupEftKitchenDrink']">
                 <item name="drinkJarWedangUwuh" count="1,2" loot_prob_template="low" />
+                <item name="drinkJarCendolDawet" count="1,2" loot_prob_template="med" />
             </append>
         </if>
     </conditional>

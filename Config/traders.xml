@@ -20,6 +20,7 @@
         <trader_item_group name="groupIndonesianDrinks">
             <item name="drinkJarWedangUwuh" />
             <item name="drinkJarKopiJoss" />
+            <item name="drinkJarCendolDawet" />
         </trader_item_group>
         <trader_item_group name="groupIndonesianFoodAll">
             <item group="groupIndonesianFoods" />
@@ -73,6 +74,7 @@
             <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupEftDrink']">
                 <item name="drinkJarWedangUwuh" />
                 <item name="drinkJarKopiJoss" />
+                <item name="drinkJarCendolDawet" />
             </append>
         </if>
     </conditional>

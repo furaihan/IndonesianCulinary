@@ -294,5 +294,40 @@
                 <passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.2"/>
             </effect_group>
         </buff>
+        <buff name="buffCendolDawet" name_key="buffCendolDawet"
+            description_key="buffCendolDawetDesc" icon="ui_game_symbol_food">
+            <stack_type value="replace" />
+            <duration value="0" />
+            <display_value value=".buffCendolDawetDisplay" />
+            <display_value_format value="time" />
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar="$buffCendolDawetDuration" operation="subtract" value="@$MetabolismDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffCendolDawetDisplay" operation="set" value="@$buffCendolDawetDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffCendolDawetDisplay" operation="divide" value="@$MetabolismDuration" />
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffCendolDawet">
+                    <requirement name="CVarCompare" cvar="$buffCendolDawetDuration" operation="LTE"
+                        value="0" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffCendolDawet">
+                    <requirement name="HasBuff" buff="god" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+                    cvar=".buffCendolDawetDisplay,$buffCendolDawetDuration" />
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="13"/>
+                <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".073"/>
+            </effect_group>
+        </buff>
     </append>
 </IndonesianCulinary>

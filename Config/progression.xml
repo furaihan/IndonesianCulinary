@@ -11,9 +11,9 @@
                 <unlock_entry item="foodSateAyam,foodBakwanJagung" unlock_tier="2" />
                 <unlock_entry item="foodKolak, drinkJarKopiJoss" unlock_tier="3" />
             </display_entry>
-            <display_entry icon="foodTinutuan,foodRawon,foodSotoBetawi" name_key="foodIdT2-1" has_quality="false"
+            <display_entry icon="foodTinutuan,foodRawon,foodSotoBetawi,foodBrongkos" name_key="foodIdT2-1" has_quality="false"
                 unlock_level="30,34,37,40">
-                <unlock_entry item="foodTinutuan,foodPerkedel" unlock_tier="1" />
+                <unlock_entry item="foodTinutuan,foodPerkedel,drinkJarCendolDawet" unlock_tier="1" />
                 <unlock_entry item="foodRawon" unlock_tier="2" />
                 <unlock_entry item="foodSotoBetawi" unlock_tier="3" />  
                 <unlock_entry item="foodBrongkos" unlock_tier="4" />
@@ -27,7 +27,7 @@
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,100"
                     value="1" tags="foodKolak, drinkJarKopiJoss" />
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100"
-                    value="1" tags="foodTinutuan,foodPerkedel" />
+                    value="1" tags="foodTinutuan,foodPerkedel,drinkJarCendolDawet" />
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="34,100"
                     value="1" tags="foodRawon" />
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="37,100"

@@ -144,31 +144,36 @@
 					value="-1,-2,-3" tags="resourceCropChrysanthemumPlant" />
 			</effect_group>
 		</recipe>
-		<recipe name="drinkJarCendolDawet" count="1" craft_area="campfire" craft_tool="toolCookingPot"
+		<recipe name="drinkJarCendolDawet" count="1" craft_area="campfire"
+			craft_tool="toolCookingPot"
 			tags="perkMasterChef,learnable">
 			<ingredient name="resourceSnowBall" count="2" />          <!-- es -->
 			<ingredient name="drinkJarBoiledWater" count="2" />       <!-- air -->
 			<ingredient name="resourceAnimalFat" count="1" />                <!-- santan -->
 			<ingredient name="foodHoney" count="1" />              <!-- gula merah -->
-			<ingredient name="resourceCropYuccaFruit" count="4" />    <!-- cendol -->
+			<ingredient name="foodCropYuccaFruit" count="4" />    <!-- cendol -->
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" level="2,3" operation="base_add"
 					value="-1,-1" tags="resourceSnowBall" />
 				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
-					value="-1,-1,-2" tags="resourceCropYuccaFruit" />
+					value="-1,-1,-2" tags="foodCropYuccaFruit" />
 			</effect_group>
 		</recipe>
-		<recipe name="foodBelalangGoreng" count="1" craft_area="campfire" craft_tool="toolCookingPot"
+		<recipe name="foodBelalangGoreng" count="1" craft_area="campfire"
+			craft_tool="toolCookingPot"
 			tags="perkMasterChef,learnable">
-			<ingredient name="foodRawMeat" count="3" />
-			<ingredient name="resourceAnimalFat" count="3" />
-			<ingredient name="foodCornMeal" count="3" />
+			<ingredient name="foodRawMeat" count="5" />
+			<ingredient name="foodCanCatfood" count="1" />
+			<ingredient name="foodCanDogfood" count="1" />
 			<ingredient name="resourceCropChrysanthemumPlant" count="4" />
+			<ingredient name="resourceCropHopsFlower" count="4" />
 			<effect_group>
-				<passive_effect name="CraftingIngredientCount" level="2,3" operation="base_add"
-					value="-1,-1" tags="resourceAnimalFat" />
 				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
-					value="-1,-1,-1" tags="foodCornMeal" />
+					value="-1,-2,-2" tags="resourceCropChrysanthemumPlant" />
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
+					value="-1,-2,-2" tags="resourceCropHopsFlower" />
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
+					value="-1,-2,-3" tags="foodRawMeat" />
 			</effect_group>
 		</recipe>
 

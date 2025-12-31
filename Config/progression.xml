@@ -1,7 +1,7 @@
 <IndonesianCulinary>
     <insertAfter
         xpath="/progression/crafting_skills[@complete_sound='ui_mag_read_set']/crafting_skill[@name='craftingFood']">
-        <crafting_skill name="craftingFoodIndonesian" max_level="40" parent="attCrafting"
+        <crafting_skill name="craftingFoodIndonesian" max_level="50" parent="attCrafting"
             name_key="craftingFoodIndonesianName" desc_key="craftingFoodIndonesianDesc"
             long_desc_key="craftingFoodIndonesianLongDesc" icon="ui_game_symbol_fork">
             <display_entry icon="drinkJarWedangUwuh,foodSateAyam,foodKolak"
@@ -15,8 +15,12 @@
                 unlock_level="30,34,37,40">
                 <unlock_entry item="foodTinutuan,foodPerkedel,drinkJarCendolDawet" unlock_tier="1" />
                 <unlock_entry item="foodRawon" unlock_tier="2" />
-                <unlock_entry item="foodSotoBetawi" unlock_tier="3" />  
+                <unlock_entry item="foodSotoBetawi" unlock_tier="3" />
                 <unlock_entry item="foodBrongkos" unlock_tier="4" />
+            </display_entry>
+            <display_entry icon="foodBelalangGoreng" name_key="foodIdT3-1" has_quality="false"
+                unlock_level="50">
+                <unlock_entry item="foodBelalangGoreng" unlock_tier="3" />
             </display_entry>
 
             <effect_group>
@@ -34,6 +38,8 @@
                     value="1" tags="foodSotoBetawi" />
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,100"
                     value="1" tags="foodBrongkos" />
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100"
+                    value="1" tags="foodBelalangGoreng" />
             </effect_group>
         </crafting_skill>
     </insertAfter>

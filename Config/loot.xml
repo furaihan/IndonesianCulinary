@@ -17,6 +17,9 @@
             <item name="foodRawon" loot_prob_template="low" />
             <item name="foodBrongkos" loot_prob_template="low" />
         </lootgroup>
+        <lootgroup name="groupIndonesianFoodT3">
+            <item name="foodBelalangGoreng" />
+        </lootgroup>
         <lootgroup name="groupIndonesianCannedFood">
             <!-- TBA -->
         </lootgroup>
@@ -30,6 +33,7 @@
             <item name="foodBrongkos" />
             <item name="foodBakwanJagung" />
             <item name="foodPerkedel" />
+            <item name="foodBelalangGoreng" />
             <item name="foodSambalBawang" />
             <item name="foodSambalMatah" />
         </lootgroup>
@@ -69,6 +73,7 @@
         <item name="foodSotoBetawi" />
         <item name="foodRawon" />
         <item name="foodBrongkos" />
+        <item name="foodBelalangGoreng" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='twitch_drink']">
         <item name="drinkJarWedangUwuh" />
@@ -81,6 +86,7 @@
         <item name="foodSotoBetawi" count="2,5" loot_prob_template="QuestT2Prob" />
         <item name="foodRawon" count="2,5" loot_prob_template="QuestT2Prob" />
         <item name="foodBrongkos" count="2,5" loot_prob_template="QuestT2Prob" />
+        <item name="foodBelalangGoreng" count="2,5" loot_prob_template="QuestT3Prob" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='twitch_foodT1']">
         <item name="foodKolak" count="2,4" />
@@ -100,6 +106,9 @@
     <append xpath="/lootcontainers/lootgroup[@name='groupQuestT4Food']">
         <item name="foodRawon" count="3,5" />
         <item name="foodBrongkos" count="3,5" />
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupQuestT5Food']">
+        <item name="foodBelalangGoreng" count="3,5" />
     </append>
     <append xpath="/lootcontainers/lootgroup[@name='groupFoodRare']">
         <item name="foodTinutuan" count="2,4" />
@@ -191,6 +200,7 @@
     <append xpath="/lootcontainers/lootgroup[@name='groupShamwayCrate01']">
         <item group="groupIndonesianFoodT1" loot_prob_template="low" />
         <item group="groupIndonesianFoodT2" loot_prob_template="veryLow" />
+        <item group="groupIndonesianFoodT3" loot_prob_template="veryLow" />
         <item group="groupIndonesianDrink" loot_prob_template="veryLow" />
     </append>
 
@@ -221,10 +231,6 @@
         <item name="drinkJarKopiJoss" loot_prob_template="veryLow" />
     </append>
 
-    <!-- Lucky Looter themed (Soto Betawi has +15 loot stage!) -->
-    <append xpath="/lootcontainers/lootgroup[@name='groupLuckyLooterBooks']">
-        <item name="foodSotoBetawi" loot_prob_template="veryLow" />
-    </append>
 
     <!-- Survival/Medical themed (dysentery cure drinks) -->
     <append xpath="/lootcontainers/lootgroup[@name='survivalMedical']">

@@ -329,5 +329,40 @@
                 <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".073"/>
             </effect_group>
         </buff>
+        <buff name="buffBelalangGoreng" name_key="foodBelalangGoreng"
+            description_key="foodBelalangGorengDesc" icon="ui_game_symbol_food">
+            <stack_type value="replace" />
+            <duration value="0" />
+            <display_value value=".buffBelalangGorengDisplay" />
+            <display_value_format value="time" />
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar="$buffBelalangGorengDuration" operation="subtract" value="@$MetabolismDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffBelalangGorengDisplay" operation="set" value="@$buffBelalangGorengDuration" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+                    cvar=".buffBelalangGorengDisplay" operation="divide" value="@$MetabolismDuration" />
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffBelalangGoreng">
+                    <requirement name="CVarCompare" cvar="$buffBelalangGorengDuration" operation="LTE"
+                        value="0" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff"
+                    buff="buffBelalangGoreng">
+                    <requirement name="HasBuff" buff="god" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+                    cvar=".buffBelalangGorengDisplay,$buffBelalangGorengDuration" />
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="JumpStrength" operation="perc_add" value=".2"/>
+                <passive_effect name="StaminaLoss" operation="perc_add" value=".75" tags="jumping"/>
+            </effect_group>
+        </buff>
     </append>
 </IndonesianCulinary>

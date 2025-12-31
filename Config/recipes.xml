@@ -144,18 +144,31 @@
 					value="-1,-2,-3" tags="resourceCropChrysanthemumPlant" />
 			</effect_group>
 		</recipe>
-		<recipe name="drinkJarEsDawet" count="1" craft_area="campfire" craft_tool="toolCookingPot"
+		<recipe name="drinkJarCendolDawet" count="1" craft_area="campfire" craft_tool="toolCookingPot"
 			tags="perkMasterChef,learnable">
 			<ingredient name="resourceSnowBall" count="2" />          <!-- es -->
 			<ingredient name="drinkJarBoiledWater" count="2" />       <!-- air -->
 			<ingredient name="resourceAnimalFat" count="1" />                <!-- santan -->
-			<ingredient name="foodCanHoney" count="1" />              <!-- gula merah -->
+			<ingredient name="foodHoney" count="1" />              <!-- gula merah -->
 			<ingredient name="resourceCropYuccaFruit" count="4" />    <!-- cendol -->
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" level="2,3" operation="base_add"
 					value="-1,-1" tags="resourceSnowBall" />
 				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
 					value="-1,-1,-2" tags="resourceCropYuccaFruit" />
+			</effect_group>
+		</recipe>
+		<recipe name="foodBelalangGoreng" count="1" craft_area="campfire" craft_tool="toolCookingPot"
+			tags="perkMasterChef,learnable">
+			<ingredient name="foodRawMeat" count="3" />
+			<ingredient name="resourceAnimalFat" count="3" />
+			<ingredient name="foodCornMeal" count="3" />
+			<ingredient name="resourceCropChrysanthemumPlant" count="4" />
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,3" operation="base_add"
+					value="-1,-1" tags="resourceAnimalFat" />
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add"
+					value="-1,-1,-1" tags="foodCornMeal" />
 			</effect_group>
 		</recipe>
 

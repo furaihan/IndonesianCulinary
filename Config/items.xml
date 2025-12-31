@@ -533,6 +533,43 @@
                     buff="buffExtinguishFire" />
             </effect_group>
         </item>
+        <item name="foodBelalangGoreng">
+            <property name="Tags" value="food,foodSkill,fitness" />
+            <property name="HoldType" value="31" />
+            <property name="DisplayType" value="food" />
+            <property name="Meshfile" value="@:Other/Items/Food/foodPlatePrefab.prefab" />
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab" />
+            <property name="Material" value="Morganic" />
+            <property name="Stacknumber" value="25" />
+            <property name="EconomicValue" value="256" />
+            <property name="UnlockedBy" value="craftingFoodIndonesian" />
+            <property name="SoundPickup" value="meat_grilled_grab" />
+            <property name="SoundPlace" value="meat_grilled_place" />
+            <property class="Action0">
+                <property name="Class" value="Eat" />
+                <property name="Delay" value="1.0" />
+                <property name="Sound_start" value="player_eating" />
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking" />
+
+            <effect_group tiered="false" name="Food Tier 3">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$foodAmountAdd" operation="add" value="51" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="foodHealthAmount" operation="add" value="10" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$buffBelalangGorengDuration" operation="add" value="183" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar"
+                    cvar="$buffBelalangGorengDuration" operation="set" value="363">
+                    <requirement name="CVarCompare" cvar="$buffBelalangGorengDuration" operation="GT"
+                        value="363" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff"
+                    buff="buffProcessConsumables,buffBelalangGoreng" />
+                <display_value name="dJumpStrength" value=".2" />
+                <display_value name="dDuration" value="180" />
+            </effect_group>
+        </item>
     </append>
 
 

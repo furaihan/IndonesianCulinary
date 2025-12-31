@@ -1,6 +1,6 @@
 <IndonesianCulinary>
     <append xpath="/traders/trader_item_groups/trader_item_group[@name='skillMagazines']">
-        <item name="indonesianFoodSkillMagazine" count="1,2" />
+        <item name="indonesianFoodSkillMagazine" count="2,5" />
     </append>
 
     <insertBefore xpath="//trader_item_group[@name='groupRangedAll']">
@@ -14,6 +14,7 @@
             <item name="foodBrongkos" />
             <item name="foodBakwanJagung" />
             <item name="foodPerkedel" />
+            <item name="foodBelalangGoreng" />
             <item name="foodSambalBawang" />
             <item name="foodSambalMatah" />
         </trader_item_group>
@@ -68,6 +69,7 @@
                 <item name="foodBrongkos" />
                 <item name="foodBakwanJagung" />
                 <item name="foodPerkedel" />
+                <item name="foodBelalangGoreng" />
                 <item name="foodSambalBawang" />
                 <item name="foodSambalMatah" />
             </append>

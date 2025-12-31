@@ -11,16 +11,16 @@
                 <unlock_entry item="foodSateAyam,foodBakwanJagung" unlock_tier="2" />
                 <unlock_entry item="foodKolak, drinkJarKopiJoss" unlock_tier="3" />
             </display_entry>
-            <display_entry icon="foodTinutuan,foodRawon,foodSotoBetawi,foodBrongkos" name_key="foodIdT2-1" has_quality="false"
+            <display_entry icon="foodTinutuan,foodRawon,foodSotoBetawi,foodBrongkos" name_key="foodIdT2-1,foodIdT2-2,foodIdT2-3,foodIdT2-4" has_quality="false"
                 unlock_level="30,34,37,40">
-                <unlock_entry item="foodTinutuan,foodPerkedel,drinkJarCendolDawet" unlock_tier="1" />
-                <unlock_entry item="foodRawon" unlock_tier="2" />
+                <unlock_entry item="foodTinutuan,foodPerkedel" unlock_tier="1" />
+                <unlock_entry item="foodRawon,drinkJarCendolDawet" unlock_tier="2" />
                 <unlock_entry item="foodSotoBetawi" unlock_tier="3" />
                 <unlock_entry item="foodBrongkos" unlock_tier="4" />
             </display_entry>
             <display_entry icon="foodBelalangGoreng" name_key="foodIdT3-1" has_quality="false"
                 unlock_level="50">
-                <unlock_entry item="foodBelalangGoreng" unlock_tier="3" />
+                <unlock_entry item="foodBelalangGoreng" unlock_tier="1" />
             </display_entry>
 
             <effect_group>
@@ -31,9 +31,9 @@
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,100"
                     value="1" tags="foodKolak, drinkJarKopiJoss" />
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100"
-                    value="1" tags="foodTinutuan,foodPerkedel,drinkJarCendolDawet" />
+                    value="1" tags="foodTinutuan,foodPerkedel" />
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="34,100"
-                    value="1" tags="foodRawon" />
+                    value="1" tags="foodRawon,drinkJarCendolDawet" />
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="37,100"
                     value="1" tags="foodSotoBetawi" />
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,100"

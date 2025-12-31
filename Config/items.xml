@@ -536,7 +536,7 @@
         <item name="foodBelalangGoreng">
             <property name="Tags" value="food,foodSkill,fitness" />
             <property name="HoldType" value="31" />
-            <property name="DisplayType" value="food" />
+            <property name="DisplayType" value="foodBelalangGoreng" />
             <property name="Meshfile" value="@:Other/Items/Food/foodPlatePrefab.prefab" />
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab" />
             <property name="Material" value="Morganic" />
@@ -549,6 +549,7 @@
                 <property name="Class" value="Eat" />
                 <property name="Delay" value="1.0" />
                 <property name="Sound_start" value="player_eating" />
+                <property name="SmellUse" value="100"/>
             </property>
             <property name="Group" value="Food/Cooking,CFFood/Cooking" />
 
@@ -568,6 +569,7 @@
                     buff="buffProcessConsumables,buffBelalangGoreng" />
                 <display_value name="dJumpStrength" value=".2" />
                 <display_value name="dDuration" value="180" />
+                <display_value name="dSmellUse" value="100"/>
             </effect_group>
         </item>
     </append>
